@@ -1,0 +1,4 @@
+[package]
+name = "mpv-rice"
+version = "0.0.1"
+authors = ["Thomas Daede <daede003@umn.edu>"]
