@@ -3,6 +3,5 @@ name = "mpv-rice"
 version = "0.0.1"
 authors = ["Thomas Daede <daede003@umn.edu>"]
 
-[dependencies.gtk]
-git = "https://github.com/rust-gnome/gtk.git"
-features = ["gtk_3_12"]
+[dependencies]
+gtk = "0.0"
