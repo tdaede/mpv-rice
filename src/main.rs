@@ -1,7 +1,6 @@
 extern crate gtk;
 
-use gtk::traits::*;
-use gtk::signal::Inhibit;
+use gtk::prelude::*;
 
 use std::error::Error;
 use std::io::prelude::*;
@@ -12,7 +11,7 @@ use std::env;
 fn main() {
     gtk::init().expect("Failed to initialize GTK.");
 
-    let window = gtk::Window::new(gtk::WindowType::Toplevel).unwrap();
+    let window = gtk::Window::new(gtk::WindowType::Toplevel);
 
     window.set_title("mpv-rice");
     window.set_border_width(10);
@@ -24,7 +23,7 @@ fn main() {
         Inhibit(true)
     });
 
-    let button = gtk::Button::new_with_label("Write config").unwrap();
+    let button = gtk::Button::new_with_label("Write config");
     button.connect_clicked(move |_| {
        let args: Vec<String> = env::args().collect();
        let path = Path::new(&args[1]);
