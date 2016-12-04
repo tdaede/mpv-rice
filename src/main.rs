@@ -10,7 +10,7 @@ use std::path::Path;
 use std::env;
 
 fn main() {
-    gtk::init().unwrap_or_else(|_| panic!("Failed to initialize GTK."));
+    gtk::init().expect("Failed to initialize GTK.");
 
     let window = gtk::Window::new(gtk::WindowType::Toplevel).unwrap();
 
